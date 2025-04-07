@@ -4,9 +4,9 @@ Bienvenido al repositorio de practicos de ORT de Gonzalo Rosano. Este proyecto i
 
 ## Índice de Prácticos
 
-- [Práctico 0](practico-0/)
-- [Práctico 1](practico-1/)
-- [Práctico 2](practico-2/)
+- [Práctico 0](https://ort.grosano.com/practico-0/)
+- [Práctico 1](https://ort.grosano.com/practico-1/)
+- [Práctico 2](https://ort.grosano.com/practico-2/)
 
 ## Cómo navegar por los prácticos
 
