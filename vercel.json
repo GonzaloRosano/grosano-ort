@@ -1,0 +1,10 @@
+{
+    "redirects": [
+        {
+          "source": "/(.*[^/])",
+          "has": [{ "type": "file", "value": "index.html" }],
+          "destination": "/$1/",
+          "statusCode": 308
+        }
+      ]
+  }
