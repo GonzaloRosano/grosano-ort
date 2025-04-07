@@ -19,12 +19,9 @@ const departamentos = {
     R: 'Tacuarembó',
     S: 'Montevideo'
 };
-
 document.querySelector('#btnComprobar').addEventListener('click', comprobar);
-
 function comprobar() {
     const departamento = document.querySelector('#txtDepartamento').value.toUpperCase();
-
     document.querySelector('#msgRespuesta').innerHTML =
         departamentos[departamento] || 'No corresponde a ningun departamento';
 }

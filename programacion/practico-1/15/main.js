@@ -1,29 +1,16 @@
-function obtenerElemento(id) {
-  return document.querySelector(`#${id}`);
-}
-
-function addEventListenerToButton(id, callback) {
-  document.querySelector(`#${id}`).addEventListener("click", callback);
-}
-
+document.querySelector("#btnAcumular").addEventListener("click", acumular);
+document.querySelector("#btnTotal").addEventListener("click", total);
+document.querySelector("#btnLimpiar").addEventListener("click", reiniciar);
 let valorAcumulado = 0;
-
 function acumular() {
-  let valor = Number(obtenerElemento("txtValor").value);
+  let valor = Number(document.querySelector("#txtValor").value);
   valorAcumulado += valor;
-  obtenerElemento("spnAcumulado").innerHTML = '';
+  document.querySelector("#spnAcumulado").innerHTML = '';
 }
-
 function total() {
-  obtenerElemento("spnAcumulado").innerHTML = valorAcumulado;
+  document.querySelector("#spnAcumulado").innerHTML = valorAcumulado;
 }
-
 function reiniciar() {
   valorAcumulado = 0;
-  obtenerElemento("spnAcumulado").innerHTML = valorAcumulado;
+  document.querySelector("#spnAcumulado").innerHTML = valorAcumulado;
 }
-
-addEventListenerToButton("btnAcumular", acumular);
-addEventListenerToButton("btnTotal", total);
-addEventListenerToButton("btnLimpiar", reiniciar);
-

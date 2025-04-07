@@ -8,5 +8,4 @@ function comprobar(){
     } else {
         alert('Entre diez y treinta')
     }
-    
 }

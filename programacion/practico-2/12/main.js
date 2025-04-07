@@ -1,5 +1,4 @@
 document.querySelector('#btnComprobar').addEventListener('click', comprobar)
-
 function comprobar() {
     let letra = document.querySelector('#txtLetra').value
 

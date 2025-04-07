@@ -6,5 +6,4 @@ function comprobar(){
     } else {
         alert('NO CUMPLE')
     }
-    
 }

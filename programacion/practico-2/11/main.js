@@ -1,10 +1,8 @@
 document.querySelector('#btnCalcular').addEventListener('click', comprobar)
-
 function comprobar() {
     let primero = Number(document.querySelector("#txtPrimero").value);
     let segundo = Number(document.querySelector("#txtSegundo").value);
     let operacion = document.querySelector("#slcOperacion").value;
-
     let resultado = 0;
     if (operacion == "S") {
         resultado = primero + segundo
@@ -15,7 +13,5 @@ function comprobar() {
     } else if (operacion == "D") {
         resultado = primero / segundo
     } 
-    
     document.querySelector('#msgRespuesta').innerHTML = resultado
-
 }

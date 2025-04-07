@@ -1,26 +1,11 @@
-function obtenerElemento(id) {
-  return document.querySelector(`#${id}`);
-}
-
-function addEventListenerToButton(id, callback) {
-  document.querySelector(`#${id}`).addEventListener("click", callback);
-}
+document.querySelector("#btnAgregar").addEventListener("click", addToCounter);
+document.querySelector("#btnLimpiar").addEventListener("click", reiniciar);
 let contador = 0;
-
 function addToCounter() {
   contador++;
-  obtenerElemento("spnContador").innerHTML = contador;
-
-}
-
+  document.querySelector("#spnContador").innerHTML = contador;
+}  
 function reiniciar() {contador
   contador = 0;
-  obtenerElemento("spnContador").innerHTML = contador;
-}
-
-
-
-addEventListenerToButton("btnAgregar", addToCounter);
-
-addEventListenerToButton("btnLimpiar", reiniciar);
-
+  document.querySelector("#spnContador").innerHTML = contador;
+}  

@@ -1,23 +1,7 @@
-function obtenerElemento(id) {
-  return document.querySelector(`#${id}`);
-}
-
-function addEventListenerToButton(id, callback) {
-  document.querySelector(`#${id}`).addEventListener("click", callback);
-}
-
-
+document.querySelector("#btnCalcular").addEventListener("click", calcularPuntos);
 function calcularPuntos(){
-  let ganados = Number(obtenerElemento("txtGanados").value);
-  let empatados = Number(obtenerElemento("txtEmpatados").value);
+  let ganados = Number(document.querySelector("#txtGanados").value);
+  let empatados = Number(document.querySelector("#txtEmpatados").value);
   let puntosTotales = eval((ganados*3) + empatados);
-
-  obtenerElemento("spnPuntos").innerHTML = puntosTotales
-
-
+  document.querySelector("#spnPuntos").innerHTML = puntosTotales
 }
-
-
-
-addEventListenerToButton("btnCalcular", calcularPuntos);
-

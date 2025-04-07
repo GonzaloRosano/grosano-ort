@@ -1,20 +1,7 @@
-function obtenerElemento(id) {
-  return document.querySelector(`#${id}`);
-}
-
-function addEventListenerToButton(id, callback) {
-  document.querySelector(`#${id}`).addEventListener("click", callback);
-}
-
-
+document.querySelector("#btnResto").addEventListener("click", calcularResto);
 function calcularResto(){
-    let valorUno = Number(obtenerElemento("txtValorUno").value);
-    let valorDos = Number(obtenerElemento("txtValorDos").value);
-    const resultadoResto = obtenerElemento("spnResto");
-
+    let valorUno = Number(document.querySelector("#txtValorUno").value);
+    let valorDos = Number(document.querySelector("#txtValorDos").value);
+    const resultadoResto = document.querySelector("#spnResto");
     resultadoResto.innerText = valorUno % valorDos
-
 }
-
-addEventListenerToButton("btnResto", calcularResto);
-
