@@ -1,10 +1,129 @@
 {
     "redirects": [
         {
-          "source": "/(.*[^/])",
-          "has": [{ "type": "file", "value": "index.html" }],
-          "destination": "/$1/",
-          "statusCode": 308
-        }
-      ]
+            "source": "/practico-0/ejercicio-1",
+            "destination": "/practico-0/ejercicio-1/",
+            "permanent": true
+          },
+          {
+            "source": "/practico-1/ejercicio-7",
+            "destination": "/practico-0/ejercicio-7/",
+            "permanent": true
+          },
+          {
+            "source": "/practico-1/ejercicio-8",
+            "destination": "/practico-1/ejercicio-8/",
+            "permanent": true
+          },
+          {
+            "source": "/practico-1/ejercicio-9",
+            "destination": "/practico-1/ejercicio-9/",
+            "permanent": true
+          },
+          {
+            "source": "/practico-1/ejercicio-10",
+            "destination": "/practico-1/ejercicio-10/",
+            "permanent": true
+          },
+          {
+            "source": "/practico-1/ejercicio-11",
+            "destination": "/practico-1/ejercicio-11/",
+            "permanent": true
+          },
+          {
+            "source": "/practico-1/ejercicio-12",
+            "destination": "/practico-1/ejercicio-12/",
+            "permanent": true
+          },
+          {
+            "source": "/practico-1/ejercicio-13",
+            "destination": "/practico-1/ejercicio-13/",
+            "permanent": true
+          },
+          {
+            "source": "/practico-1/ejercicio-14",
+            "destination": "/practico-1/ejercicio-14/",
+            "permanent": true
+          },
+          {
+            "source": "/practico-1/ejercicio-15",
+            "destination": "/practico-1/ejercicio-15/",
+            "permanent": true
+          },
+          {
+            "source": "/practico-1/ejercicio-16",
+            "destination": "/practico-1/ejercicio-16/",
+            "permanent": true
+          },
+          {
+            "source": "/practico-1/ejercicio-17",
+            "destination": "/practico-1/ejercicio-17/",
+            "permanent": true
+          },
+          {
+            "source": "/practico-1/ejercicio-18",
+            "destination": "/practico-1/ejercicio-18/",
+            "permanent": true
+          },
+          {
+            "source": "/practico-1/ejercicio-19",
+            "destination": "/practico-1/ejercicio-19/",
+            "permanent": true
+          },
+          {
+            "source": "/practico-1/ejercicio-20",
+            "destination": "/practico-1/ejercicio-20/",
+            "permanent": true
+          },
+          {
+            "source": "/practico-1/ejercicio-21",
+            "destination": "/practico-1/ejercicio-21/",
+            "permanent": true
+          },
+          {
+            "source": "/practico-1/ejercicio-22",
+            "destination": "/practico-1/ejercicio-22/",
+            "permanent": true
+          },
+          {
+            "source": "/practico-1/ejercicio-23",
+            "destination": "/practico-1/ejercicio-23/",
+            "permanent": true
+          },
+          {
+            "source": "/practico-1/ejercicio-24",
+            "destination": "/practico-1/ejercicio-24/",
+            "permanent": true
+          },
+          {
+            "source": "/practico-1/ejercicio-25",
+            "destination": "/practico-1/ejercicio-25/",
+            "permanent": true
+          },
+          {
+            "source": "/practico-1/ejercicio-26",
+            "destination": "/practico-1/ejercicio-26/",
+            "permanent": true
+          },
+          {
+            "source": "/practico-1/ejercicio-27",
+            "destination": "/practico-1/ejercicio-27/",
+            "permanent": true
+          },
+          {
+            "source": "/practico-1/ejercicio-28",
+            "destination": "/practico-1/ejercicio-28/",
+            "permanent": true
+          },
+          {
+            "source": "/practico-1/ejercicio-29",
+            "destination": "/practico-1/ejercicio-29/",
+            "permanent": true
+          },
+          {
+            "source": "/practico-1/ejercicio-30",
+            "destination": "/practico-1/ejercicio-30/",
+            "permanent": true
+          }
+    ]
   }
