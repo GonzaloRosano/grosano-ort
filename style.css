@@ -17,6 +17,7 @@ main {
     height: 100vh;
 }
 .btn-volver {
+    position: fixed;
     background-color: #ff0055;
     color: white;
     border: none;
