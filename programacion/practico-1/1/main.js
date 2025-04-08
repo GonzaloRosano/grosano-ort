@@ -5,5 +5,6 @@ function capitalize(text) {
 function formatearNombre() {
     let nombre = document.querySelector("#txtNombre").value;
     let apellido = document.querySelector("#txtApellido").value;
+    let nombreFormateado = document.querySelector("#spnFormatText");
     nombreFormateado.innerText = `${capitalize(apellido)}, ${capitalize(nombre)}`;
   }
