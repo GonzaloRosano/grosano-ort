@@ -1,27 +1,30 @@
 document.querySelector("#btnAgregar").addEventListener("click", agregar);
 document.querySelector("#btnReiniciar").addEventListener("click", reiniciar);
 let numeros = [];
-let suma = 0;
-// ⭐⭐Ingresar cinco números. Indicar cuántos son múltiplos de 5, cuantos son mayores que 20 y cuantos cumplieron ambas condiciones en simultáneo.
-// La solución deberá utilizar un único campo de texto y un único botón
+
 function agregar() {
-    let numero = document.querySelector("#txtNumeros").value;
-    if (numero !== "") {
-        numeros.push(numero);
-        document.querySelector("#msgNumeros").innerHTML = numeros;
-        console.log(numeros);
-        suma = numeros.reduce((acumulado, actual) => acumulado + Number(actual), 0);
-        if (numeros.length === 6) {
-            document.querySelector("#btnAgregar").disabled = true;
-            document.querySelector("#msgSuma").innerHTML = suma;
-        }
+  let numero = Number(document.querySelector("#txtNumeros").value);
+  numeros.push(numero);
+  document.querySelector("#txtNumeros").value = "";
+  document.querySelector("#txtNumeros").focus();
+
+  document.querySelector("#msgNumeros").innerHTML = numeros.join(", ");
+
+  if (numeros.length === 5) {
+    document.querySelector("#btnAgregar").disabled = true;
+    let multiplosDe5 = 0;
+    let mayoresDe20 = 0;
+    for (let n of numeros) {
+      if (n % 5 == 0) multiplosDe5++;
+      if (n > 20) mayoresDe20++;
     }
-    document.querySelector("#txtNumeros").value = "";
-    
+    document.querySelector("#msgResultado").innerHTML += `
+    <br> Múltiplos de 5: ${multiplosDe5} <br> Mayores a 20: ${mayoresDe20}`;
+  }
 }
+
 function reiniciar() {
-    numeros = [];
-    document.querySelector("#msgNumeros").innerHTML = numeros;
-    document.querySelector("#btnAgregar").disabled = false;
-    document.querySelector("#msgSuma").innerHTML = "";
+  numeros = [];
+  document.querySelector("#btnAgregar").disabled = false;
+  document.querySelector("#msgNumeros").innerHTML = "";
 }
