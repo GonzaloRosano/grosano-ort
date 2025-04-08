@@ -1,4 +1,4 @@
-document.querySelector('#btnResultado').addEventListener('click', calcular,)
+document.querySelector('#btnResultado').addEventListener('click', calcular)
 function calcular(){
     let valorUno = Number(document.querySelector('#txtValorUno').value)
     let valorDos = Number(document.querySelector('#txtValorDos').value)

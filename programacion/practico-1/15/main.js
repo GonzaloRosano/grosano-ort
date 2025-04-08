@@ -5,7 +5,6 @@ let valorAcumulado = 0;
 function acumular() {
   let valor = Number(document.querySelector("#txtValor").value);
   valorAcumulado += valor;
-  document.querySelector("#spnAcumulado").innerHTML = '';
 }
 function total() {
   document.querySelector("#spnAcumulado").innerHTML = valorAcumulado;
