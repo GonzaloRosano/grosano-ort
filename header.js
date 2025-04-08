@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <header>
         <a href="/">
           <figure>
-            <img src="/img/logo.webp" alt="Logo">
+            <div class="icon-color"></div>
             <figcaption>Gonzalo Rosano</figcaption>
           </figure>
         </a>

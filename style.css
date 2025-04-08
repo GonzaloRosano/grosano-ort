@@ -1,7 +1,7 @@
 :root {
     --radius: 0.5rem;
     --padding: 1rem;
-    --margin: 0.5rem;
+    --margin: 0.9rem;
     --box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
     --font-size: 1rem;
     --background-color: #f2f2f2;
@@ -47,12 +47,42 @@ header figure img {
     width: 50px;
     height: 50px;
     margin-right: var(--margin);
+    background-image: url('/img/logo.webp');
+    background-size: cover;
+    background-position: center;
+    transition: background-color 0.3s ease;
+    background-blend-mode: multiply;
+
+}
+
+.icon-color {
+    width: 55px;
+    height: 55px;
+    background-color: black;
+    -webkit-mask-image: url('/img/logo.webp');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    mask-image: url('/img/logo.webp');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    transition: background-color 0.3s ease;
+}
+
+header figure:hover .icon-color {
+    background-color: #ff0055;
+}
+
+header figure img:hover {
+    cursor: pointer;
 }
 
 header nav ul {
     display: flex;
     align-items: center;
 }
+
 
 header nav ul li {
     margin-right: var(--margin);
@@ -73,6 +103,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: calc(100vh - 72px);
 }
 
 #materias {
@@ -90,11 +121,11 @@ main {
 
 
 
-main > div {
+main>div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 500px;
+    min-width: 60%;
     justify-content: center;
     background-color: var(--background-color);
     padding: var(--padding);
@@ -102,9 +133,11 @@ main > div {
     box-shadow: var(--box-shadow);
     margin: var(--margin);
 }
+
 p {
     max-width: 100%;
 }
+
 form {
     display: flex;
     flex-direction: column;
@@ -133,10 +166,12 @@ input[type="button"] {
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
+
 input[type="button"]:disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }
+
 input[type="button"]:disabled:hover {
     background-color: #b6b6b6;
 }
@@ -179,12 +214,379 @@ input[type="button"]:hover {
     text-align: center;
     transition: scale 0.2s ease, color 0.2s ease;
 }
+
 .card:hover {
     scale: 1.02;
     color: #363636;
 }
+
 #materias div {
     display: flex;
 }
 
-@keyframes card-animation{0%{--c-0:hsla(161,89%,76%,1); --x-0:53%; --y-0:9%; --s-start-0:6%; --s-end-0:68%; --c-1:hsla(101,65%,77%,1); --x-1:94%; --y-1:4%; --s-start-1:6%; --s-end-1:68%; --c-2:hsla(134,85%,93%,1); --x-2:83%; --y-2:23%; --s-start-2:6%; --s-end-2:68%; --c-3:hsla(162,95%,94%,1); --x-3:96%; --y-3:44%; --s-start-3:6%; --s-end-3:68%; --c-4:hsla(138,99%,95%,1); --x-4:66%; --y-4:93%; --s-start-4:6%; --s-end-4:68%; --c-5:hsla(125,56%,57%,1); --x-5:40%; --y-5:80%; --s-start-5:6%; --s-end-5:68%;}50%{--c-0:hsla(159,94%,92%,1); --x-0:23%; --y-0:1%; --s-start-0:6%; --s-end-0:68%; --c-1:hsla(119,82%,90%,1); --x-1:20%; --y-1:87%; --s-start-1:6%; --s-end-1:68%; --c-2:hsla(88,76%,86%,1); --x-2:97%; --y-2:27%; --s-start-2:6%; --s-end-2:68%; --c-3:hsla(109,68%,54%,1); --x-3:84%; --y-3:97%; --s-start-3:6%; --s-end-3:68%; --c-4:hsla(174,71%,89%,1); --x-4:12%; --y-4:100%; --s-start-4:6%; --s-end-4:68%; --c-5:hsla(92,63%,52%,1); --x-5:1%; --y-5:3%; --s-start-5:6%; --s-end-5:68%;}100%{--c-0:hsla(127,57%,79%,1); --x-0:77%; --y-0:13%; --s-start-0:6%; --s-end-0:68%; --c-1:hsla(125,61%,59%,1); --x-1:11%; --y-1:59%; --s-start-1:6%; --s-end-1:68%; --c-2:hsla(134,99%,96%,1); --x-2:41%; --y-2:56%; --s-start-2:6%; --s-end-2:68%; --c-3:hsla(86,60%,81%,1); --x-3:61%; --y-3:99%; --s-start-3:6%; --s-end-3:68%; --c-4:hsla(176,57%,75%,1); --x-4:75%; --y-4:66%; --s-start-4:6%; --s-end-4:68%; --c-5:hsla(170,63%,63%,1); --x-5:6%; --y-5:35%; --s-start-5:6%; --s-end-5:68%;}}@property --c-0{syntax:'<color>';inherits:false;initial-value:hsla(161,89%,76%,1)}@property --x-0{syntax:'<percentage>';inherits:false;initial-value:53%}@property --y-0{syntax:'<percentage>';inherits:false;initial-value:9%}@property --s-start-0{syntax:'<percentage>';inherits:false;initial-value:6%}@property --s-end-0{syntax:'<percentage>';inherits:false;initial-value:68%}@property --c-1{syntax:'<color>';inherits:false;initial-value:hsla(101,65%,77%,1)}@property --x-1{syntax:'<percentage>';inherits:false;initial-value:94%}@property --y-1{syntax:'<percentage>';inherits:false;initial-value:4%}@property --s-start-1{syntax:'<percentage>';inherits:false;initial-value:6%}@property --s-end-1{syntax:'<percentage>';inherits:false;initial-value:68%}@property --c-2{syntax:'<color>';inherits:false;initial-value:hsla(134,85%,93%,1)}@property --x-2{syntax:'<percentage>';inherits:false;initial-value:83%}@property --y-2{syntax:'<percentage>';inherits:false;initial-value:23%}@property --s-start-2{syntax:'<percentage>';inherits:false;initial-value:6%}@property --s-end-2{syntax:'<percentage>';inherits:false;initial-value:68%}@property --c-3{syntax:'<color>';inherits:false;initial-value:hsla(162,95%,94%,1)}@property --x-3{syntax:'<percentage>';inherits:false;initial-value:96%}@property --y-3{syntax:'<percentage>';inherits:false;initial-value:44%}@property --s-start-3{syntax:'<percentage>';inherits:false;initial-value:6%}@property --s-end-3{syntax:'<percentage>';inherits:false;initial-value:68%}@property --c-4{syntax:'<color>';inherits:false;initial-value:hsla(138,99%,95%,1)}@property --x-4{syntax:'<percentage>';inherits:false;initial-value:66%}@property --y-4{syntax:'<percentage>';inherits:false;initial-value:93%}@property --s-start-4{syntax:'<percentage>';inherits:false;initial-value:6%}@property --s-end-4{syntax:'<percentage>';inherits:false;initial-value:68%}@property --c-5{syntax:'<color>';inherits:false;initial-value:hsla(125,56%,57%,1)}@property --x-5{syntax:'<percentage>';inherits:false;initial-value:40%}@property --y-5{syntax:'<percentage>';inherits:false;initial-value:80%}@property --s-start-5{syntax:'<percentage>';inherits:false;initial-value:6%}@property --s-end-5{syntax:'<percentage>';inherits:false;initial-value:68%}.card{--c-0:hsla(161,89%,76%,1);--x-0:53%;--y-0:9%;--c-1:hsla(101,65%,77%,1);--x-1:94%;--y-1:4%;--c-2:hsla(134,85%,93%,1);--x-2:83%;--y-2:23%;--c-3:hsla(162,95%,94%,1);--x-3:96%;--y-3:44%;--c-4:hsla(138,99%,95%,1);--x-4:66%;--y-4:93%;--c-5:hsla(125,56%,57%,1);--x-5:40%;--y-5:80%;;background-color:hsla(155,59%,96%,1);background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 1592 1592' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"),radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0),transparent var(--s-end-0)),radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1),transparent var(--s-end-1)),radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2),transparent var(--s-end-2)),radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3),transparent var(--s-end-3)),radial-gradient(circle at var(--x-4) var(--y-4), var(--c-4) var(--s-start-4),transparent var(--s-end-4)),radial-gradient(circle at var(--x-5) var(--y-5), var(--c-5) var(--s-start-5),transparent var(--s-end-5));animation:card-animation 5s linear infinite alternate;background-blend-mode:overlay,normal,normal,normal,normal,normal,normal;}
+@keyframes card-animation {
+    0% {
+        --c-0: hsla(161, 89%, 76%, 1);
+        --x-0: 53%;
+        --y-0: 9%;
+        --s-start-0: 6%;
+        --s-end-0: 68%;
+        --c-1: hsla(101, 65%, 77%, 1);
+        --x-1: 94%;
+        --y-1: 4%;
+        --s-start-1: 6%;
+        --s-end-1: 68%;
+        --c-2: hsla(134, 85%, 93%, 1);
+        --x-2: 83%;
+        --y-2: 23%;
+        --s-start-2: 6%;
+        --s-end-2: 68%;
+        --c-3: hsla(162, 95%, 94%, 1);
+        --x-3: 96%;
+        --y-3: 44%;
+        --s-start-3: 6%;
+        --s-end-3: 68%;
+        --c-4: hsla(138, 99%, 95%, 1);
+        --x-4: 66%;
+        --y-4: 93%;
+        --s-start-4: 6%;
+        --s-end-4: 68%;
+        --c-5: hsla(125, 56%, 57%, 1);
+        --x-5: 40%;
+        --y-5: 80%;
+        --s-start-5: 6%;
+        --s-end-5: 68%;
+    }
+
+    50% {
+        --c-0: hsla(159, 94%, 92%, 1);
+        --x-0: 23%;
+        --y-0: 1%;
+        --s-start-0: 6%;
+        --s-end-0: 68%;
+        --c-1: hsla(119, 82%, 90%, 1);
+        --x-1: 20%;
+        --y-1: 87%;
+        --s-start-1: 6%;
+        --s-end-1: 68%;
+        --c-2: hsla(88, 76%, 86%, 1);
+        --x-2: 97%;
+        --y-2: 27%;
+        --s-start-2: 6%;
+        --s-end-2: 68%;
+        --c-3: hsla(109, 68%, 54%, 1);
+        --x-3: 84%;
+        --y-3: 97%;
+        --s-start-3: 6%;
+        --s-end-3: 68%;
+        --c-4: hsla(174, 71%, 89%, 1);
+        --x-4: 12%;
+        --y-4: 100%;
+        --s-start-4: 6%;
+        --s-end-4: 68%;
+        --c-5: hsla(92, 63%, 52%, 1);
+        --x-5: 1%;
+        --y-5: 3%;
+        --s-start-5: 6%;
+        --s-end-5: 68%;
+    }
+
+    100% {
+        --c-0: hsla(127, 57%, 79%, 1);
+        --x-0: 77%;
+        --y-0: 13%;
+        --s-start-0: 6%;
+        --s-end-0: 68%;
+        --c-1: hsla(125, 61%, 59%, 1);
+        --x-1: 11%;
+        --y-1: 59%;
+        --s-start-1: 6%;
+        --s-end-1: 68%;
+        --c-2: hsla(134, 99%, 96%, 1);
+        --x-2: 41%;
+        --y-2: 56%;
+        --s-start-2: 6%;
+        --s-end-2: 68%;
+        --c-3: hsla(86, 60%, 81%, 1);
+        --x-3: 61%;
+        --y-3: 99%;
+        --s-start-3: 6%;
+        --s-end-3: 68%;
+        --c-4: hsla(176, 57%, 75%, 1);
+        --x-4: 75%;
+        --y-4: 66%;
+        --s-start-4: 6%;
+        --s-end-4: 68%;
+        --c-5: hsla(170, 63%, 63%, 1);
+        --x-5: 6%;
+        --y-5: 35%;
+        --s-start-5: 6%;
+        --s-end-5: 68%;
+    }
+}
+
+@property --c-0 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(161, 89%, 76%, 1)
+}
+
+@property --x-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 53%
+}
+
+@property --y-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 9%
+}
+
+@property --s-start-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 6%
+}
+
+@property --s-end-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 68%
+}
+
+@property --c-1 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(101, 65%, 77%, 1)
+}
+
+@property --x-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 94%
+}
+
+@property --y-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 4%
+}
+
+@property --s-start-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 6%
+}
+
+@property --s-end-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 68%
+}
+
+@property --c-2 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(134, 85%, 93%, 1)
+}
+
+@property --x-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 83%
+}
+
+@property --y-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 23%
+}
+
+@property --s-start-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 6%
+}
+
+@property --s-end-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 68%
+}
+
+@property --c-3 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(162, 95%, 94%, 1)
+}
+
+@property --x-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 96%
+}
+
+@property --y-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 44%
+}
+
+@property --s-start-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 6%
+}
+
+@property --s-end-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 68%
+}
+
+@property --c-4 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(138, 99%, 95%, 1)
+}
+
+@property --x-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 66%
+}
+
+@property --y-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 93%
+}
+
+@property --s-start-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 6%
+}
+
+@property --s-end-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 68%
+}
+
+@property --c-5 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(125, 56%, 57%, 1)
+}
+
+@property --x-5 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 40%
+}
+
+@property --y-5 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 80%
+}
+
+@property --s-start-5 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 6%
+}
+
+@property --s-end-5 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 68%
+}
+
+.card {
+    --c-0: hsla(161, 89%, 76%, 1);
+    --x-0: 53%;
+    --y-0: 9%;
+    --c-1: hsla(101, 65%, 77%, 1);
+    --x-1: 94%;
+    --y-1: 4%;
+    --c-2: hsla(134, 85%, 93%, 1);
+    --x-2: 83%;
+    --y-2: 23%;
+    --c-3: hsla(162, 95%, 94%, 1);
+    --x-3: 96%;
+    --y-3: 44%;
+    --c-4: hsla(138, 99%, 95%, 1);
+    --x-4: 66%;
+    --y-4: 93%;
+    --c-5: hsla(125, 56%, 57%, 1);
+    --x-5: 40%;
+    --y-5: 80%;
+    ;
+    background-color: hsla(155, 59%, 96%, 1);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1592 1592' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)), radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1)), radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2), transparent var(--s-end-2)), radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3), transparent var(--s-end-3)), radial-gradient(circle at var(--x-4) var(--y-4), var(--c-4) var(--s-start-4), transparent var(--s-end-4)), radial-gradient(circle at var(--x-5) var(--y-5), var(--c-5) var(--s-start-5), transparent var(--s-end-5));
+    animation: card-animation 5s linear infinite alternate;
+    background-blend-mode: overlay, normal, normal, normal, normal, normal, normal;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    header figure {
+        margin-bottom: 0.5rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    header nav ul li {
+        margin-right: 0;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    main > div {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="button"],
+    select {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    #materias {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    #materias div {
+        flex-direction: column;
+    }
+
+    .btn-volver {
+        font-size: 0.9rem;
+        padding: 0.7rem;
+    }
+}
