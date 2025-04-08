@@ -4,7 +4,7 @@ let numeros = [];
 let suma = 0;
 
 function agregar() {
-    let numero = document.querySelector("#txtNumeros").value;
+    let numero = Math.abs(document.querySelector("#txtNumeros").value);
     if (numero !== "") {
         numeros.push(numero);
         document.querySelector("#msgNumeros").innerHTML = numeros;
