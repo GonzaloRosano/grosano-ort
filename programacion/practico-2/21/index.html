@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <title>Ejercicio 21</title>
+</head>
+
+<body>
+    <script src="/header.js"></script>
+    <main>
+        <div>
+            <form>
+                <label for="txtIngresos">Ingresos</label>
+                <input type="number" id="txtIngresos" min="0">
+                <label for="txtCosto">Costo de la casa</label>
+                <input type="number" id="txtCosto" min="0">
+                <input type="button" id="btnCalcular" value="Calcular">
+            </form>
+            <p>Primer pago: <span id="msgPrimerPago"></span></p>
+            <p>Pago parcial: <span id="msgPagoParcial"></span></p>
+        </div>
+    </main>
+    <script src="./main.js"></script>
+    <script src="../../../volver.js"></script>
+</body>
+
+</html>
