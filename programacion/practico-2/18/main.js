@@ -8,7 +8,6 @@ function agregar() {
     if (numero !== "") {
         numeros.push(numero);
         document.querySelector("#msgNumeros").innerHTML = numeros;
-        console.log(numeros);
         suma = numeros.reduce((acumulado, actual) => acumulado + Number(actual), 0);
         if (numeros.length === 6) {
             document.querySelector("#btnAgregar").disabled = true;
