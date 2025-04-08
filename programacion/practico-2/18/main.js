@@ -14,6 +14,7 @@ function agregar() {
             document.querySelector("#msgSuma").innerHTML = suma;
         }
     }
+    document.querySelector("#txtNumeros").value = "";
 }
 function reiniciar() {
     numeros = [];
