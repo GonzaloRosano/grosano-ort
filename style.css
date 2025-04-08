@@ -17,14 +17,13 @@ main {
     height: 100vh;
 }
 .btn-volver {
-    bottom: 0;
-    left: 0;
     position: fixed;
+    bottom: 5px;
+    left: 5px;
     background-color: #ff0055;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
-    margin-bottom: 1.5rem;
     border-radius: var(--radius);
     cursor: pointer;
     font-size: 0.95rem;
