@@ -1,0 +1,12 @@
+
+.logo-mobile {
+    display: none;
+}
+@media (width < 769px) {
+    .logo-desktop {
+        display: none;
+    }
+    .logo-mobile {
+        display: block;
+    }
+}

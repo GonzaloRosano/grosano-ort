@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <title>Diseño de interfaz web</title>
+    <title>Programación - Índice</title>
+
 </head>
 <body>
-<script src="/header.js"></script>
-   
-<script src="/volver.js"></script>
-    
+    <script src="/header.js"></script>
+    <main>
+        <h1>Índice de Programación</h1>
+        <ul id="index-list"></ul>
+    </main>
+
+    <script>
+        const base = window.location.pathname.replace(/\/$/, "");
+        const pages = [
+            "1", "2", "3", "4"
+        ];
+
+        const list = document.getElementById("index-list");
+        pages.forEach(p => {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = `${base}/ejercicio-${p}/`;
+            a.textContent = `Ejercicio ${p}`;
+            li.appendChild(a);
+            list.appendChild(li);
+        });
+    </script>
+    <script src="../volver.js"></script>
+
 </body>
+
 </html>
