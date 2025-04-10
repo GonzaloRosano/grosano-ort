@@ -15,10 +15,12 @@ function adivinar() {
     btnAdivinar.disabled = true;
   } else if (numero > numSecreto) {
     msgIntentos.innerHTML = intentos;
-    document.querySelector("#msgPista").innerHTML = "El numero es menor";
+    document.querySelector("#msgPista").innerHTML =
+      "El numero que buscas es menor";
   } else {
     msgIntentos.innerHTML = intentos;
-    document.querySelector("#msgPista").innerHTML = "El numero es mayor";
+    document.querySelector("#msgPista").innerHTML =
+      "El numero que buscas es mayor";
   }
   txtNumero.value = "";
 }
