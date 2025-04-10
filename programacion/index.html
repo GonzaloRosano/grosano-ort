@@ -8,6 +8,7 @@
     <title>Programación - Índice</title>
 
 </head>
+
 <body>
     <script src="/header.js"></script>
     <main>
@@ -18,19 +19,23 @@
     <script>
         const base = window.location.pathname.replace(/\/$/, "");
         const pages = [
-            "0", "1", "2"
+            { path: "0", name: "Practico 0", type: "practico" },
+            { path: "1", name: "Practico 1", type: "practico" },
+            { path: "2", name: "Practico 2", type: "practico" },
+            { path: "ejercicio-5", name: "Ejercicio 5", type: "ejercicio" }
         ];
 
         const list = document.getElementById("index-list");
         pages.forEach(p => {
             const li = document.createElement("li");
             const a = document.createElement("a");
-            a.href = `${base}/practico-${p}/`;
-            a.textContent = `Practico ${p}`;
+            a.href = `${base}/${p.path}/`;
+            a.textContent = p.name;
             li.appendChild(a);
             list.appendChild(li);
         });
     </script>
+    >
     <script src="../volver.js"></script>
 
 </body>
