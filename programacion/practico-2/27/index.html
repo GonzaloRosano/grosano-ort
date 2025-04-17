@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <title>Ejercicio 27</title>
+</head>
+
+<body>
+
+    <script src="/header.js"></script>
+    <main>
+        <div>
+            <h1>Ejercicio 27</h1>
+            <form>
+                <label for="txtNoches">Cantidad de noches a alojarse</label>
+                <input type="number" id="txtNoches" min="1">
+
+                <label for="txtPago">Medio de pago</label>
+                <select id="txtPago">
+                    <option value="e">Efectivo</option>
+                    <option value="t">Tarjeta</option>
+                </select>
+
+                <input type="button" id="btnCalcular" value="Calcular">
+            </form>
+
+            <p>Noches de regalo: <span id="msgNochesRegalo">0</span></p>
+            <p>Total de noches: <span id="msgTotalNoches">0</span></p>
+            <p>Monto final a pagar: <span id="msgMontoPagar">$0</span></p>
+        </div>
+    </main>
+    <script src="./main.js"></script>
+    <script src="../../../volver.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <title>Ejercicio 25</title>
+</head>
+
+<body>
+
+    <script src="/header.js"></script>
+    <main>
+        <div>
+            <h1>Ejercicio 25</h1>
+            <form>
+                <label for="txtStock">Stock inicial</label>
+                <input type="number" id="txtStock" min="1" required>
+                <input type="button" id="btnIniciar" value="Iniciar">
+            </form>
+            <div id="contenedor">
+                <form>
+                    <label for="txtNombre">Nombre</label>
+                    <input type="text" id="txtNombre" required>
+                    <label for="txtCantidad">Cantidad</label>
+                    <input type="number" id="txtCantidad" min="1" required>
+                    <input type="button" id="btnPedir" value="Pedir">
+                </form>
+                <p id="msgStock"></p>
+                <p id="msgClienteMayor"></p>
+                <p id="msgCantidadPedidos"></p>
+            </div>
+        </div>
+    </main>
+    <script src="./main.js"></script>
+    <script src="../../../volver.js"></script>
+</body>
+
+</html>

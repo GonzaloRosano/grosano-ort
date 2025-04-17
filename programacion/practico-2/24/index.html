@@ -9,13 +9,19 @@
 </head>
 
 <body>
- 
+
     <script src="/header.js"></script>
     <main>
         <div>
+            <h1>Ejercicio 24</h1>
             <form>
-               
+                <label for="txtSueldo">Sueldo del empleado</label>
+                <input type="number" id="txtSueldo" min="0">
+                <input type="button" id="btnAgregar" value="Agregar">
             </form>
+            <p>Total de sueldos a pagar: <span id="msgTotalSueldos"></span></p>
+            <p>Cantidad de empleados este mes: <span id="msgCantidadEmpleados"></span></p>
+            <p>Sueldo más bajo: <span id="msgSueldoBajo"></span></p>
         </div>
     </main>
     <script src="./main.js"></script>

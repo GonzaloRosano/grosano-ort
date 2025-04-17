@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="../../style.css">
     <title>Practico 2</title>
 </head>
+
 <body>
-<script src="/header.js"></script>
-   
+    <script src="/header.js"></script>
+
     <main>
         <h1>Practico 1</h1>
         <ul id="index-list"></ul>
@@ -21,7 +22,7 @@
                 "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"
             ];
 
-            const list = document.getElementById("index-list");
+            const list = document.querySelector("#index-list");
             pages.forEach(p => {
                 const li = document.createElement("li");
                 const a = document.createElement("a");

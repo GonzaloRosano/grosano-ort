@@ -22,14 +22,14 @@
             { path: "0", name: "Practico 0", type: "practico" },
             { path: "1", name: "Practico 1", type: "practico" },
             { path: "2", name: "Practico 2", type: "practico" },
-            { path: "ejercicio-5", name: "Ejercicio 5", type: "ejercicio" }
+            { path: "5", name: "Ejercicio 5", type: "ejercicio" }
         ];
 
-        const list = document.getElementById("index-list");
+        const list = document.querySelector("#index-list");
         pages.forEach(p => {
             const li = document.createElement("li");
             const a = document.createElement("a");
-            a.href = `${base}/${p.path}/`;
+            a.href = `${base}/${p.type}-${p.path}/`;
             a.textContent = p.name;
             li.appendChild(a);
             list.appendChild(li);
